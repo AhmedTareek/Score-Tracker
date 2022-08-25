@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/aTeamScore"
         android:text="@string/team_a"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,8 @@
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bTeamScore"
+
         android:layout_marginEnd="75dp"
         android:text="@string/team_b"
         android:textSize="20sp"
@@ -35,8 +36,8 @@
         android:id="@+id/aTeamScore"
         android:layout_width="153dp"
         android:layout_height="78dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/a3Points"
         android:text="@string/score"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -48,22 +49,23 @@
 
     <View
         android:layout_width="1dp"
-        android:layout_height="370dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:background="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/team_b_txt"
         app:layout_constraintStart_toEndOf="@+id/team_a_txt"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/bTeamScore"
         android:layout_width="153dp"
         android:layout_height="78dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/score"
         android:textAlignment="center"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/b3Points"
 
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="@+id/team_b_txt"
@@ -74,71 +76,73 @@
         android:id="@+id/a3Points"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:text="@string/points3"
         app:layout_constraintLeft_toLeftOf="@+id/team_a_txt"
-
+        app:layout_constraintTop_toBottomOf="@+id/aTeamScore"
+        app:layout_constraintBottom_toTopOf="@+id/a2Points"
 
         app:layout_constraintRight_toRightOf="@id/team_a_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_a_txt" />
+        />
 
 
     <Button
         android:id="@+id/b3Points"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:text="@string/points3"
         app:layout_constraintLeft_toLeftOf="@+id/team_b_txt"
         app:layout_constraintRight_toRightOf="@id/team_b_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_b_txt" />
+        app:layout_constraintBottom_toTopOf="@+id/b2Points"
+        app:layout_constraintTop_toBottomOf="@+id/bTeamScore" />
 
     <Button
         android:id="@+id/b2Points"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
         android:text="@string/points2"
+
         app:layout_constraintLeft_toLeftOf="@+id/team_b_txt"
         app:layout_constraintRight_toRightOf="@id/team_b_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_b_txt" />
+        app:layout_constraintBottom_toTopOf="@id/bFreeThrow"
+        app:layout_constraintTop_toBottomOf="@+id/b3Points" />
 
     <Button
         android:id="@+id/a2Points"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
         android:text="@string/points2"
         app:layout_constraintLeft_toLeftOf="@+id/team_a_txt"
         app:layout_constraintRight_toRightOf="@id/team_a_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_a_txt" />
+        app:layout_constraintBottom_toTopOf="@+id/aFreeThrow"
+        app:layout_constraintTop_toBottomOf="@+id/a3Points" />
 
     <Button
         android:id="@+id/aFreeThrow"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
         android:text="@string/free_throw"
         app:layout_constraintLeft_toLeftOf="@+id/team_a_txt"
         app:layout_constraintRight_toRightOf="@id/team_a_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_a_txt" />
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintTop_toBottomOf="@+id/a2Points" />
 
     <Button
         android:id="@+id/bFreeThrow"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+
         android:text="@string/free_throw"
         app:layout_constraintLeft_toLeftOf="@+id/team_b_txt"
         app:layout_constraintRight_toRightOf="@id/team_b_txt"
-        app:layout_constraintTop_toBottomOf="@+id/team_b_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/b2Points" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bFreeThrow"
         app:layout_constraintStart_toStartOf="@+id/aFreeThrow"
         app:layout_constraintTop_toBottomOf="@+id/aFreeThrow" />
