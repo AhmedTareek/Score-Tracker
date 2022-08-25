@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">متتبع النتيجة</string>
+    <string name="team_a">الفريق أ</string>
+    <string name="team_b">الفريق ب</string>
+    <string name="points3">نقاط +3</string>
+    <string name="points2">نقاط +2</string>
+    <string name="free_throw">ركلة حرة</string>
+    <string name="reset">اعادة للعداد للصفر</string>
+
+</resources>
